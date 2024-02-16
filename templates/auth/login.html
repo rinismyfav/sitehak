@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/vars.css' %}">
+    <link rel="stylesheet" href="{% static 'css/new_login.css' %}">
+    <title>Title</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="content">
+            <div class="left">
+                <div class="login-form">
+                    <form method="POST">
+                        <div class="form-element">
+                            <h2 style="font-size: 30px;">Авторизация</h2>
+                        </div>
+                        {% for f in form %}
+                        <div class="form-element">
+                            {{f}}
+                        </div>
+                        {% endfor %}
+
+                        {% csrf_token %}
+                        <div class="button_block">
+                            <button class="" type="submit">Войти</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <h1>Название</h1>
+                <h3>Обучайтесь с умом</h3>
+                <a href="/">Вернуться на сайт</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

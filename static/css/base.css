@@ -1,0 +1,185 @@
+* {
+    font-family: "Roboto", sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    outline: none;
+    border: none;
+
+    overflow-wrap: break-word;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: .17px;
+}
+
+body, html {
+    background-color: var(--bg-color);
+}
+
+.navbar {
+    width: 100vw;
+    height: 60px;
+    /*background-color: var(--dark);*/
+    background: linear-gradient(#574ab4, #512ea8);
+    color: var(--bg-color);
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+}
+
+.navbar > .title {
+    background-color: transparent;
+    /*background-color: var(--dark);*/
+    /*background: linear-gradient(#574ab4, #512ea8);*/
+}
+
+#home {
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    display: flex;
+}
+
+.navbar > .title > a > h1 {
+    background-color: transparent;
+    padding: 0;
+    font-size: 22px;
+    margin: auto 1rem;
+}
+
+.content {
+    height: calc(100vh - 60px - 2rem);
+    max-height: calc(100vh - 60px - 2rem);
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+#profile {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row-reverse;
+}
+
+#profile > a {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto 0;
+}
+
+#profile > a > h1 {
+    padding-left: 0.3rem;
+    margin: auto;
+    font-size: 24px;
+}
+
+.links, #profile {
+    height: 100%;
+    background-color: transparent;
+}
+
+.buttons {
+    display: flex;
+    height: 100%;
+    flex-direction: row-reverse;
+    margin-right: 1rem;
+}
+
+.buttons > h1 {
+    flex-direction: row-reverse;
+    margin: auto;
+    margin-right: 1rem;
+}
+
+#login, #reg {
+    margin: auto 1rem;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    outline: 1px solid white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+
+#profile-logo {
+    font: 36px "Material Symbols Outlined";
+    padding-left: 0.3rem;
+}
+
+#profile > a {
+    margin: auto 1rem;
+    color: white;
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+#login:hover, #reg:hover {
+    background-color: white;
+    color: var(--dark);
+}
+
+#notes {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+}
+
+.notes-count {
+    height: 100%;
+    display: flex;
+    color: white;
+    padding-top: 0.2rem;
+}
+
+#notes-modal {
+    position: fixed;
+    top: 3rem;
+    height: 50vh;
+    width: 20vw;
+    right: 10%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8.3px);
+    -webkit-backdrop-filter: blur(8.3px);
+    border: 2px solid rgba(255, 255, 255, 0.31);
+    padding: 0.5rem;
+    z-index: 10;
+
+    overflow-y: scroll;
+}
+
+.notification {
+    border-radius: 10px;
+    width: calc(100% - 0.8rem);
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 5px 1px var(--blue);
+    margin-bottom: 0.5rem;
+    padding: 0.4rem;
+}
+
+#notes-modal::-webkit-scrollbar {
+    display: none;
+}
+
+.note-title {
+    width: 100%;
+}
+
+.note-link {
+    width: 100%;
+    text-align: end;
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
